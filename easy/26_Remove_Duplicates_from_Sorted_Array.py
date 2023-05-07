@@ -1,8 +1,9 @@
 class Solution:
-    def removeElement(self, nums: List[int], val: int) -> int:
-        i = 0
+    def removeDuplicates(self, nums: List[int]) -> int:
+        i,k = 0,1
         for n in nums:
-            if n != val:
-                nums[i] = n
+            if nums[i] != n:
                 i += 1
-        return i
+                nums[i] = n
+                k += 1
+        return k
