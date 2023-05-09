@@ -1,4 +1,5 @@
 class Solution:
+    # O(n), two pointers
     def removeDuplicates(self, nums: List[int]) -> int:
         i,k = 0,1
         for n in nums:

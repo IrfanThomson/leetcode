@@ -1,4 +1,5 @@
 class Solution:
+    # O(n), voting algorithm
     def majorityElement(self, nums: List[int]) -> int:
         count = 0
         candidate = -1
