@@ -6,6 +6,6 @@ class Solution:
             min_jump = 10001
             for j in range(1, nums[i]+1):
                 if i+j < len(nums):
-                    min_jump = nums[i+j]+1 if nums[i+j]+1 < min_jump else min_jump
+                    min_jump = min(nums[i+j]+1, min_jump)
             nums[i] = min_jump
         return nums[0]

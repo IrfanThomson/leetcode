@@ -8,5 +8,5 @@ class Solution:
                 s = -1
             elif p > s:
                 s = p
-                result = s - b if result < s - b else result
+                result = max(s-b, result)
         return result
