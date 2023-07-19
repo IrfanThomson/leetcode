@@ -1,0 +1,15 @@
+class Solution:
+    # BFS O(n)
+    def maxDepth(self, root: Optional[TreeNode]) -> int:
+        if not root:
+            return 0
+        def maxDepthRecurse(self, val, node):
+            right, left = 0,0
+            if not node.right and not node.left:
+                return val
+            if node.left:
+                left = maxDepthRecurse(self,val+1,node.left)
+            if node.right:
+                right = maxDepthRecurse(self,val+1,node.right)
+            return max(left,right)
+        return maxDepthRecurse(self, 1, root)
